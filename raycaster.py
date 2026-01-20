@@ -49,4 +49,4 @@ class Raycaster:
             pg.draw.rect(screen, (self.colours[i],self.colours[i],self.colours[i]), (i * RES, y, RES, h))
 
             i += 1
-            #ray.render(screen)
+            ray.render(screen)

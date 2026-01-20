@@ -28,16 +28,16 @@ while True:
 
     screen.fill((150, 75, 0))
 
-    #map.render(screen)
-    #player.render(screen)
+    map.render(screen)
+    player.render(screen)
     if brrbrr >= 1:
         ghost.movement()
         brrbrr = 0
-    #ghost.render(screen)
+    ghost.render(screen)
     player.collision(player.x, player.y)
     player.movement()
     raycaster.castAllRays(screen)
-    raycaster.render(screen)
+    #raycaster.render(screen)
 
     brrbrr += 1/240
 
