@@ -3,7 +3,7 @@ import random
 from mappy import Map
 from settings import *
 
-class Ghost:
+class Ghost_1:
     def __init__(self, x, y):
         self.x = x
         self.y = y

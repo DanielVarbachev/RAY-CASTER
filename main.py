@@ -3,7 +3,7 @@ from settings import *
 from mappy import *
 from player import Player
 from raycaster import Raycaster
-from ghost import Ghost
+from ghost_1 import Ghost_1
 
 clock = pg.time.Clock()
 
@@ -14,7 +14,7 @@ pg.event.set_grab(True)
 pg.mouse.get_rel()
 
 map = Map()
-ghost = Ghost(14 * TS, 3 * TS)
+ghost = Ghost_1(14 * TS, 3 * TS)
 player = Player(WIN_WIDTH // 2, WIN_HEIGHT // 2, 0)
 
 raycaster = Raycaster(player, map)
