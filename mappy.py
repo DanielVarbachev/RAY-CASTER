@@ -52,7 +52,7 @@ class Map:
 
     def show_grid(self,x,y):
         try:
-            return self.grid[y][x]
+            return self.grid[y-1][x-1]
         except (IndexError, TypeError):
             return None
         

@@ -16,4 +16,4 @@ FOV = FOV * (math.pi / 180)
 RES = 1
 NUM_RAYS = WIN_WIDTH // RES
 
-brrbrr = 1
+brrbrr = 5

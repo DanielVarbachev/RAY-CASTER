@@ -4,6 +4,7 @@ from mappy import *
 from player import Player
 from raycaster import Raycaster
 from ghost_1 import Ghost_1
+from ghost_2 import Ghost_2
 
 clock = pg.time.Clock()
 
@@ -14,7 +15,8 @@ pg.event.set_grab(True)
 pg.mouse.get_rel()
 
 map = Map()
-ghost = Ghost_1(14 * TS, 3 * TS)
+ghost_1 = Ghost_1(14 * TS, 3 * TS)
+ghost_2 = Ghost_2(14 * TS, 3 * TS)
 player = Player(WIN_WIDTH // 2, WIN_HEIGHT // 2, 0)
 
 raycaster = Raycaster(player, map)
@@ -31,9 +33,11 @@ while True:
     map.render(screen)
     player.render(screen)
     if brrbrr >= 1:
-        ghost.movement()
+        ghost_1.movement()
+        ghost_2.movement(player)
         brrbrr = 0
-    ghost.render(screen)
+    ghost_1.render(screen)
+    ghost_2.render(screen)
     player.collision(player.x, player.y)
     player.movement()
     raycaster.castAllRays(screen)
